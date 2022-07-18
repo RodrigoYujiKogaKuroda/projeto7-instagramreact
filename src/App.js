@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
 import Story from "./components/Story";
-import Posts from "./components/Posts";
+import Post from "./components/Post";
 import Conteudo from "./components/Conteudo";
 import Sugestao from "./components/Sugestao";
+import FundoMobile from "./components/FundoMobile";
 
 export default function App() {
     return (
@@ -11,7 +12,7 @@ export default function App() {
             <div class="corpo">
                 <div class="esquerda">
                     <Story />
-                    <Posts />
+                    <Post />
                 </div>
         
                 <div class="sidebar">
@@ -28,13 +29,8 @@ export default function App() {
                 </div>
             </div>
 
-            <div class="fundo-mobile">
-                <ion-icon name="home"></ion-icon>
-                <ion-icon name="search-outline"></ion-icon>
-                <ion-icon name="add-circle-outline"></ion-icon>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="person-outline"></ion-icon>
-            </div>
+            <FundoMobile />
+
         </div>
     );
 }

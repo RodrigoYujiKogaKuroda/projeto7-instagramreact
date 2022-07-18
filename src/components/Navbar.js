@@ -1,21 +1,33 @@
 import React from "react";
 
+function Icone(props) {
+    return (
+        <ion-icon name={props.nome}></ion-icon>
+    );
+}
+
+function Imagem(props) {
+    return (
+        <img src={props.imagem} alt="" />
+    );
+}
+
 export default function Navbar() {
     return (
         <div class="navbar">
             <div class="container">
                 <div class="logo">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <Icone nome="logo-instagram" />
                     <div class="separador"></div>
-                    <img src="./assets/img/logo.png" alt="" />
+                    <Imagem imagem="./assets/img/logo.png" />
                 </div>
 
                 <div class="logo-mobile">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <Icone nome="logo-instagram" />
                 </div>
 
                 <div class="instagram-mobile">
-                    <img src="./assets/img/logo.png" alt="" />
+                    <Imagem imagem="./assets/img/logo.png" />
                 </div>
         
                 <div class="pesquisa">
@@ -23,14 +35,14 @@ export default function Navbar() {
                 </div>
         
                 <div class="icones">
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                    <ion-icon name="compass-outline"></ion-icon>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="person-outline"></ion-icon>
+                    <Icone nome="paper-plane-outline" />
+                    <Icone nome="compass-outline" />
+                    <Icone nome="heart-outline" />
+                    <Icone nome="person-outline" />
                 </div>
 
                 <div class="icones-mobile">
-                    <ion-icon name="paper-plane-outline"></ion-icon>
+                    <Icone nome="paper-plane-outline" />
                 </div>
             </div>
         </div>

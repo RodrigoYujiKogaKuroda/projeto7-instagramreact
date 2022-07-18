@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Posts() {
+export default function Post() {
     const posts = [
     {imagemUsuario: "./assets/img/meowed.svg", textoUsuario: "meowed", conteudo: "./assets/img/gato-telefone.svg", imagemCurtidas: "./assets/img/respondeai.svg", usuarioTexto: "respondeai", numeroCurtidas: "101.523"},
     {imagemUsuario: "./assets/img/barked.svg", textoUsuario: "barked", conteudo: "./assets/img/dog.svg", imagemCurtidas: "./assets/img/adorable_animals.svg", usuarioTexto: "adorable_animals", numeroCurtidas: "99.159"}
