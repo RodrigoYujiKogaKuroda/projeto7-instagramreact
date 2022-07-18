@@ -1,7 +1,5 @@
 import React from "react";
 
-import Setinha from './Ionicons';
-
 export default function Story() {
     const stories = [
         {imagem: "/assets/img/9gag.svg", alt: "9gag", usuario: "9gag"}, 
@@ -28,7 +26,9 @@ export default function Story() {
         </div>
         )}
 
-        <Setinha />
+        <div class="setinha">
+            <ion-icon name="chevron-forward-circle"></ion-icon>
+        </div>
 
     </div>
     );

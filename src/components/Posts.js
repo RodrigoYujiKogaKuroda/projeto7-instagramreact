@@ -1,8 +1,5 @@
 import React from "react";
 
-import AcoesTopo from './Ionicons';
-import AcoesFundo from './Ionicons';
-
 export default function Posts() {
     const posts = [
     {imagemUsuario: "/assets/img/meowed.svg", textoUsuario: "meowed", conteudo: "/assets/img/gato-telefone.svg", imagemCurtidas: "/assets/img/respondeai.svg", usuarioTexto: "respondeai", numeroCurtidas: "101.523"},
@@ -18,7 +15,9 @@ export default function Posts() {
                             <img src={post.imagemUsuario} alt="" />
                             {post.textoUsuario}
                         </div>
-                        <AcoesTopo />
+                        <div class="acoes">
+                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                        </div>
                     </div>
 
                     <div class="conteudo">
@@ -26,7 +25,16 @@ export default function Posts() {
                     </div>
 
                     <div class="fundo">
-                        <AcoesFundo />
+                        <div class="acoes">
+                            <div>
+                                <ion-icon name="heart-outline"></ion-icon>
+                                <ion-icon name="chatbubble-outline"></ion-icon>
+                                <ion-icon name="paper-plane-outline"></ion-icon>
+                            </div>
+                            <div>
+                                <ion-icon name="bookmark-outline"></ion-icon>
+                            </div>
+                        </div>
                         <div class="curtidas">
                             <img src={post.imagemCurtidas} alt="" />
                             <div class="texto">
