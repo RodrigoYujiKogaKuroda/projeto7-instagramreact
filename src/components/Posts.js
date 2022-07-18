@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Posts() {
     const posts = [
-    {imagemUsuario: "/assets/img/meowed.svg", textoUsuario: "meowed", conteudo: "/assets/img/gato-telefone.svg", imagemCurtidas: "/assets/img/respondeai.svg", usuarioTexto: "respondeai", numeroCurtidas: "101.523"},
-    {imagemUsuario: "/assets/img/barked.svg", textoUsuario: "barked", conteudo: "/assets/img/dog.svg", imagemCurtidas: "/assets/img/adorable_animals.svg", usuarioTexto: "adorable_animals", numeroCurtidas: "99.159"}
+    {imagemUsuario: "./assets/img/meowed.svg", textoUsuario: "meowed", conteudo: "./assets/img/gato-telefone.svg", imagemCurtidas: "./assets/img/respondeai.svg", usuarioTexto: "respondeai", numeroCurtidas: "101.523"},
+    {imagemUsuario: "./assets/img/barked.svg", textoUsuario: "barked", conteudo: "./assets/img/dog.svg", imagemCurtidas: "./assets/img/adorable_animals.svg", usuarioTexto: "adorable_animals", numeroCurtidas: "99.159"}
     ];
 
     return (
@@ -43,7 +43,7 @@ export default function Posts() {
                         </div>
                     </div>
                 </div>
-            )};
+            )}
         </div>
     );
 }

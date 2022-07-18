@@ -1,12 +1,12 @@
 import Navbar from "./components/Navbar";
 import Story from "./components/Story";
 import Posts from "./components/Posts";
-import Usuario from "./components/Usuario";
+import Conteudo from "./components/Conteudo";
 import Sugestao from "./components/Sugestao";
 
 export default function App() {
     return (
-        <div class="root">
+        <div>
             <Navbar />
             <div class="corpo">
                 <div class="esquerda">
@@ -15,7 +15,7 @@ export default function App() {
                 </div>
         
                 <div class="sidebar">
-                    <Usuario />
+                    <Conteudo />
                     <Sugestao />
 
                     <div class="links">
