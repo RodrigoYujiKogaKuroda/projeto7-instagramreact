@@ -1,7 +1,11 @@
-import Story from "./components/Story.js";
+import Story from "./components/Story";
+import Posts from "./components/Posts";
 
 export default function App() {
     return (
-        Hello
+        <div class="root">
+            <Story />
+            <Posts />
+        </div>
     );
 }
