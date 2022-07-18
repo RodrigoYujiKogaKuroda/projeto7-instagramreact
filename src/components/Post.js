@@ -1,9 +1,27 @@
 import React from "react";
 
+function curtir(estado) {
+    let postagem = document.querySelector(`.${estado}`);
+    postagem.setAttribute('name', 'heart');
+    postagem.classList.add("fotoCurtida");
+}
+
+function Icone(props) {
+    return (
+        <ion-icon name={props.nome}></ion-icon>
+    );
+}
+
+function IconeCurtir(props) {
+    return (
+        <ion-icon class={props.classe} onClick={() => {curtir(props.classe);}} name={props.nome}></ion-icon>
+    );
+}
+
 export default function Post() {
     const posts = [
-    {imagemUsuario: "./assets/img/meowed.svg", textoUsuario: "meowed", conteudo: "./assets/img/gato-telefone.svg", imagemCurtidas: "./assets/img/respondeai.svg", usuarioTexto: "respondeai", numeroCurtidas: "101.523"},
-    {imagemUsuario: "./assets/img/barked.svg", textoUsuario: "barked", conteudo: "./assets/img/dog.svg", imagemCurtidas: "./assets/img/adorable_animals.svg", usuarioTexto: "adorable_animals", numeroCurtidas: "99.159"}
+    {imagemUsuario: "./assets/img/meowed.svg", textoUsuario: "meowed", conteudo: "./assets/img/gato-telefone.svg", posicao: "foto0", imagemCurtidas: "./assets/img/respondeai.svg", usuarioTexto: "respondeai", numeroCurtidas: "101.523"},
+    {imagemUsuario: "./assets/img/barked.svg", textoUsuario: "barked", conteudo: "./assets/img/dog.svg", posicao: "foto1", imagemCurtidas: "./assets/img/adorable_animals.svg", usuarioTexto: "adorable_animals", numeroCurtidas: "99.159"}
     ];
 
     return (
@@ -16,23 +34,23 @@ export default function Post() {
                             {post.textoUsuario}
                         </div>
                         <div class="acoes">
-                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                            <Icone nome="ellipsis-horizontal" />
                         </div>
                     </div>
 
                     <div class="conteudo">
-                        <img src={post.conteudo} alt="" />
+                        <img class="curtida" src={post.conteudo} alt="" onClick={() => {curtir(post.posicao);}} />
                     </div>
 
                     <div class="fundo">
                         <div class="acoes">
                             <div>
-                                <ion-icon name="heart-outline"></ion-icon>
-                                <ion-icon name="chatbubble-outline"></ion-icon>
-                                <ion-icon name="paper-plane-outline"></ion-icon>
+                                <IconeCurtir nome="heart-outline" classe={post.posicao} />
+                                <Icone nome="chatbubble-outline" />
+                                <Icone nome="paper-plane-outline" />
                             </div>
                             <div>
-                                <ion-icon name="bookmark-outline"></ion-icon>
+                                <Icone nome="bookmark-outline" />
                             </div>
                         </div>
                         <div class="curtidas">

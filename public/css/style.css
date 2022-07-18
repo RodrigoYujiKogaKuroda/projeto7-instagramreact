@@ -184,11 +184,19 @@ body {
   width: 100%;
 }
 
+.post .conteudo .curtida{
+  cursor: pointer;
+}
+
 .post .fundo .acoes {
   display: flex;
   justify-content: space-between;
   padding: 13px 16px;
   font-size: 24px;
+}
+
+.post .fotoCurtida {
+  color: red;
 }
 
 .post .fundo .acoes div:first-child ion-icon {
